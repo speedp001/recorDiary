@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "926362736536",
+    "project_id": "recordiary-bb8f1",
+    "storage_bucket": "recordiary-bb8f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926362736536:android:d787a3682c003079be7ded",
+        "android_client_info": {
+          "package_name": "com.gachon.recordiary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "926362736536-s7shpao7qann4ee6d5rjt1273ku2i1t0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARvwG6DeTXV3s2quo0qp_pvEINM9-b95A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "926362736536-s7shpao7qann4ee6d5rjt1273ku2i1t0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
