@@ -45,7 +45,7 @@ public class DB extends AppCompatActivity {
     public static final int Return_fail = 200;
     //------------- FireBase Setting----------------
     //DB
-    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance("https://recordiary-bb8f1-default-rtdb.asia-southeast1.firebasedatabase.app/");
     DatabaseReference databaseReference;
 
     // Storage

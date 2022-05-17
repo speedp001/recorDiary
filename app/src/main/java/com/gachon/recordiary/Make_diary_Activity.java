@@ -44,6 +44,7 @@ import java.util.ArrayList;
 
 public class Make_diary_Activity extends AppCompatActivity {
     SwipeRefreshLayout swipeRefreshLayout;
+
     public static final int User_Info_DB = 4;
     public static final int get_Grouplist = 5;
 
@@ -59,7 +60,6 @@ public class Make_diary_Activity extends AppCompatActivity {
     private Context context = this;
 
     String UID;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,9 +91,7 @@ public class Make_diary_Activity extends AppCompatActivity {
                 }
 
                 @Override
-
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
-
                     if (InputName.getText().toString().length() >= 2 && InputName.getText().toString().length() <= 8) {
                         button.setEnabled(true);
                         InputName.setTextColor( Color.GRAY);
@@ -153,17 +151,13 @@ public class Make_diary_Activity extends AppCompatActivity {
                     if (button != null) {
                         button.setEnabled( false );
                     }
-
                 }
-
             } );
             alertDialog.show();
-
         }
 
         UID = firebaseUser.getUid();
         setContentView( R.layout.activity_make_diary_ );
-
 
         getGrouplist( UID );
 
@@ -174,7 +168,6 @@ public class Make_diary_Activity extends AppCompatActivity {
                 intent.putExtra( "UID", UID );
 
                 startActivity( intent );
-
             }
         } );
 
