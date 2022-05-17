@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/goyang"
+            android:paddingBottom="10dp"
+            android:text="Write Diary"
+            android:textAlignment="center"
+            android:textColor="@color/babyPurple"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/frametest">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/selectphoto" />
+
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/Diary_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/babyPink"
+            android:fontFamily="@font/goyang"
+            android:gravity="top"
+            android:hint="☆Title"
+            android:inputType="textPersonName"
+            android:maxLength="12"
+            android:singleLine="true"
+            android:textColor="@color/four_gray"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/Diary_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/babySky"
+            android:ems="10"
+            android:fontFamily="@font/goyang"
+            android:gravity="top"
+            android:hint="☆Share your day : )   "
+            android:paddingBottom="30dp"
+            android:singleLine="false"
+            android:textColor="@color/four_gray"
+            android:textSize="24sp"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/Diary_upload"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/goyang"
+            android:text="SAVE"
+            android:textColor="@color/two_gray"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</ScrollView>
