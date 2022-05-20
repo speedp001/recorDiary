@@ -58,12 +58,13 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
+        //sttResult"
         <EditText
             android:id="@+id/Diary_input"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="136dp"
             android:backgroundTint="@color/babySky"
-            android:ems="10"
+            android:ems="30"
             android:fontFamily="@font/goyang"
             android:gravity="top"
             android:hint="☆Share your day : )   "
@@ -72,6 +73,7 @@
             android:textColor="@color/four_gray"
             android:textSize="24sp"
             android:textStyle="normal" />
+
 
         <Button
             android:id="@+id/Diary_upload"
@@ -83,6 +85,17 @@
             android:textColor="@color/two_gray"
             android:textSize="30sp"
             android:textStyle="bold" />
+
+        //sttStart
+
+        <ImageButton
+            android:id="@+id/recordBtn"
+            android:layout_width="111dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:text="음성인식 시작"
+            app:srcCompat="@drawable/start_record" />
     </LinearLayout>
 
 
