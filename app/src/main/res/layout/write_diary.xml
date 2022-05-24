@@ -58,7 +58,7 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
-        //sttResult"
+
         <EditText
             android:id="@+id/Diary_input"
             android:layout_width="match_parent"
@@ -86,7 +86,13 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
-        //sttStart
+        <TextView
+            android:id="@+id/recordTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="음성 녹음 시작"
+            android:textSize="22sp" />
 
         <ImageButton
             android:id="@+id/recordBtn"
