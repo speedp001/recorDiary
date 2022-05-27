@@ -14,6 +14,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -48,6 +49,7 @@ public class Write_Diary extends AppCompatActivity {
 
     String curUser;
     String curGroup;
+    String emotion; // 추가
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +66,12 @@ public class Write_Diary extends AppCompatActivity {
         Diarytext = (EditText)findViewById(R.id.Diary_input);
         final Button UploadBtn = findViewById(R.id.Diary_upload);
         recordBtn = (ImageButton) findViewById(R.id.recordBtn);
+
+        // 감정 체크박스 시작 부분
+        CheckBox checkBox_P = findViewById(R.id.checkBox_P);
+        CheckBox checkBox_G = findViewById(R.id.checkBox_G);
+        CheckBox checkBox_S = findViewById(R.id.checkBox_S);
+        CheckBox checkBox_B = findViewById(R.id.checkBox_B);
 
         CheckPermission();
 
@@ -104,16 +112,91 @@ public class Write_Diary extends AppCompatActivity {
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                 String str_date = sdf.format(date);
 
-                intent.putExtra("CODE", REQUESTCODE);
-                intent.putExtra("keyGroup", curGroup);
-                intent.putExtra("keyUser", curUser);
-                intent.putExtra("keyDate", str_date);
-                intent.putExtra("keyTitle", Title);
-                intent.putExtra("keyDiary", Diary);
-                intent.putExtra("keyPath", String.valueOf(filePath));
+                if (Title.equals(""))
+                {
+                    Toast.makeText(getApplicationContext(), "제목을 입력해 주세요", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (Diary.equals(""))
+                {
+                    Toast.makeText(getApplicationContext(), "일기 내용을 입력해 주세요", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(checkBox_P.isChecked()) {
+                    // perfect db에 전송
+                    emotion = "perfect";
+                    Toast.makeText(getApplicationContext(), "perfect", Toast.LENGTH_SHORT).show();
+                    intent.putExtra("CODE", REQUESTCODE);
+                    intent.putExtra("keyGroup", curGroup);
+                    intent.putExtra("keyUser", curUser);
+                    intent.putExtra("keyDate", str_date);
+                    intent.putExtra("keyTitle", Title);
+                    intent.putExtra("keyDiary", Diary);
+                    intent.putExtra("keyPath", String.valueOf(filePath));
+                    intent.putExtra("emotion", emotion); //추가
+
+
+                    startActivity(intent);
+                    finish();
+                }
+                if(checkBox_G.isChecked()) {
+                    // good db에 전송
+                    emotion = "good";
+                    intent.putExtra("CODE", REQUESTCODE);
+                    intent.putExtra("keyGroup", curGroup);
+                    intent.putExtra("keyUser", curUser);
+                    intent.putExtra("keyDate", str_date);
+                    intent.putExtra("keyTitle", Title);
+                    intent.putExtra("keyDiary", Diary);
+                    intent.putExtra("keyPath", String.valueOf(filePath));
+                    intent.putExtra("emotion", emotion); //추가
+
+
+                    startActivity(intent);
+                    finish();
+                }
+                if(checkBox_S.isChecked()) {
+                    // soso db에 전송
+                    emotion = "soso";
+                    intent.putExtra("CODE", REQUESTCODE);
+                    intent.putExtra("keyGroup", curGroup);
+                    intent.putExtra("keyUser", curUser);
+                    intent.putExtra("keyDate", str_date);
+                    intent.putExtra("keyTitle", Title);
+                    intent.putExtra("keyDiary", Diary);
+                    intent.putExtra("keyPath", String.valueOf(filePath));
+                    intent.putExtra("emotion", emotion); //추가
+
+
+                    startActivity(intent);
+                    finish();
+                }
+                if(checkBox_B.isChecked()) {
+                    // bad db에 전송
+                    emotion = "bad";
+                    intent.putExtra("CODE", REQUESTCODE);
+                    intent.putExtra("keyGroup", curGroup);
+                    intent.putExtra("keyUser", curUser);
+                    intent.putExtra("keyDate", str_date);
+                    intent.putExtra("keyTitle", Title);
+                    intent.putExtra("keyDiary", Diary);
+                    intent.putExtra("keyPath", String.valueOf(filePath));
+                    intent.putExtra("emotion", emotion); //추가
+
+
+                    startActivity(intent);
+                    finish();
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "감정을 선택해 주세요", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 startActivity(intent);
                 finish();
+
                 switch (view.getId()) {
                     //녹음 버튼
                     case R.id.recordBtn:

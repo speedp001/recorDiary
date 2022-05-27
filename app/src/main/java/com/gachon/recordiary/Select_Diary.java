@@ -3,13 +3,16 @@ package com.gachon.recordiary;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +32,13 @@ import com.google.firebase.storage.StorageReference;
 import me.everything.android.ui.overscroll.OverScrollDecoratorHelper;
 
 public class Select_Diary extends AppCompatActivity {
+
+    // MediaPlayer 객체생성
+    MediaPlayer mediaPlayer;
+    // 시작버튼
+    Button startButton;
+    //종료버튼
+    Button stopButton;
 
     public static final int delete_DIARY_CODE = 6;
     private FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
@@ -51,8 +61,6 @@ public class Select_Diary extends AppCompatActivity {
         TextView tx1 = findViewById(R.id.Read_Title);
         TextView tx2 = findViewById(R.id.Read_date);
         TextView tx3 = findViewById(R.id.Read_Content);
-        final ImageView Read_imageview = findViewById(R.id.Read_image);
-
 
         Intent intent = getIntent();
         String diarytext= intent.getExtras().getString( "diary" );
@@ -61,6 +69,29 @@ public class Select_Diary extends AppCompatActivity {
         tx1.setText( titletext );
         String datetext= intent.getExtras().getString( "date" );
         tx2.setText( datetext );
+
+        String emotion = intent.getExtras().getString("emotion");
+        LinearLayout emotionLayer = findViewById(R.id.emotionLayer);
+        // 이미지뷰 동적 할당
+        ImageView iv = new ImageView(this);
+        if(emotion.equals("perfect")) {
+            iv.setImageResource(R.drawable.perfect);
+            emotionLayer.addView(iv);
+        }
+        if(emotion.equals("good")) {
+            iv.setImageResource(R.drawable.good);
+            emotionLayer.addView(iv);
+        }
+        if(emotion.equals("soso")) {
+            iv.setImageResource(R.drawable.soso);
+            emotionLayer.addView(iv);
+        }
+        if(emotion.equals("bad")) {
+            iv.setImageResource(R.drawable.bad);
+            emotionLayer.addView(iv);
+        }
+
+        final ImageView Read_imageview = findViewById(R.id.Read_image);
 
         String imagepath = intent.getExtras().getString("imagepath");
         curGroup = intent.getExtras().getString("curGroup");
@@ -90,6 +121,52 @@ public class Select_Diary extends AppCompatActivity {
             }
         });
 
+        // 배경음악 부분
+        startButton = findViewById(R.id.start);
+        stopButton = findViewById(R.id.stop);
+
+        String music = intent.getExtras().getString( "emotion" );
+
+        startButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), music, Toast.LENGTH_SHORT).show();
+                if(music.equals("perfect")) {
+                    // MediaPlayer 객체 할당
+                    mediaPlayer = MediaPlayer.create(Select_Diary.this, R.raw.perfect);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(true);
+                }
+                if(music.equals("good")) {
+                    // MediaPlayer 객체 할당
+                    mediaPlayer = MediaPlayer.create(Select_Diary.this, R.raw.good);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(true);
+                }
+                if(music.equals("soso")) {
+                    // MediaPlayer 객체 할당
+                    mediaPlayer = MediaPlayer.create(Select_Diary.this, R.raw.soso);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(true);
+                }
+                if(music.equals("bad")) {
+                    // MediaPlayer 객체 할당
+                    mediaPlayer = MediaPlayer.create(Select_Diary.this, R.raw.bad);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(true);
+                }
+            }
+        });
+
+        stopButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 정지버튼
+                mediaPlayer.stop();
+                // 초기화
+                mediaPlayer.reset();
+            }
+        });
 
     }
     @Override
@@ -136,5 +213,15 @@ public class Select_Diary extends AppCompatActivity {
         return true;
     }
 
-
+    // MediaPlayer는 시스템 리소스를 잡아먹는다.
+    // MediaPlayer는 필요이상으로 사용하지 않도록 주의해야 한다.
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // MediaPlayer 해지
+        if(mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
 }

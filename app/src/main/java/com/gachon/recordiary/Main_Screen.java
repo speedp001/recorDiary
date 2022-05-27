@@ -254,7 +254,7 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemViewHolde
         holder.writeUser.setText(list_data.get(position).getWriteUser());
         holder.writeUID = list_data.get(position).getWriteUID();
         holder.key = key_list.get(position);
-
+        holder.emotion = list_data.get(position).getEmotion();
 
         StorageReference storageReference = firebaseStorage.getReference().child(holder.imagepath);
 
@@ -304,6 +304,7 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemViewHolde
         String imagepath;
         ImageView imageview;
         String key;
+        String emotion;
 
         public ItemViewHolder(@NonNull View itemView){
 
@@ -333,6 +334,7 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemViewHolde
                     intent.putExtra("curGroup",curGroup);
                     intent.putExtra("writeUID",writeUID);
                     intent.putExtra("key",key);
+                    intent.putExtra("emotion", emotion);
 
                     ((Activity) context).startActivity(intent);
 

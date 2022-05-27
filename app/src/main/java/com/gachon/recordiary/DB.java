@@ -92,10 +92,11 @@ public class DB extends AppCompatActivity {
                 String Title = get_intent.getExtras().getString("keyTitle");
                 String Diary = get_intent.getExtras().getString("keyDiary");
                 String strUri = get_intent.getExtras().getString("keyPath");
+                String emotion = get_intent.getExtras().getString("emotion");
                 String Imagepath = cur_groupname + "/" + Date + "/" + Title + ".png";
                 filePath = Uri.parse(strUri);
 
-                datalist tmp_datalist = new datalist(writeUser, Date, Title, Diary, Imagepath, firebaseUser.getUid());
+                datalist tmp_datalist = new datalist(writeUser, Date, Title, Diary, Imagepath, firebaseUser.getUid(), emotion);
 
                 DBPath = "Group/" + cur_groupname + "/";
                 databaseReference = firebaseDatabase.getReference(DBPath);
