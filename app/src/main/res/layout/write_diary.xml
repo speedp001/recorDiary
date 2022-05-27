@@ -19,11 +19,11 @@
             android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#004F8C"
             android:fontFamily="@font/goyang"
-            android:paddingBottom="10dp"
             android:text="Write Diary"
             android:textAlignment="center"
-            android:textColor="@color/babyPurple"
+            android:textColor="#FAB200"
             android:textSize="36sp"
             android:textStyle="bold" />
 
@@ -39,7 +39,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                app:srcCompat="@drawable/selectphoto" />
+                app:srcCompat="@drawable/loading" />
 
         </FrameLayout>
 
@@ -47,7 +47,7 @@
             android:id="@+id/Diary_title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:backgroundTint="@color/babyPink"
+            android:backgroundTint="#FAB200"
             android:fontFamily="@font/goyang"
             android:gravity="top"
             android:hint="☆Title"
@@ -63,11 +63,11 @@
             android:id="@+id/Diary_input"
             android:layout_width="match_parent"
             android:layout_height="136dp"
-            android:backgroundTint="@color/babySky"
+            android:backgroundTint="#FAB200"
             android:ems="30"
             android:fontFamily="@font/goyang"
             android:gravity="top"
-            android:hint="☆Share your day : )   "
+            android:hint="Enter    "
             android:paddingBottom="30dp"
             android:singleLine="false"
             android:textColor="@color/four_gray"

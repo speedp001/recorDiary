@@ -23,7 +23,6 @@
 
         <activity android:name=".make_new_diary"></activity>
         <activity android:name=".name" />
-        <activity android:name=".Main_Screen" />
         <activity android:name=".Intro"
             android:exported="true">
             <intent-filter>
@@ -39,6 +38,7 @@
         <activity android:name=".Register" />
         <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
         <activity android:name=".Make_diary_Activity" />
+        <activity android:name=".Main_Screen" />
     </application>
 
 </manifest>

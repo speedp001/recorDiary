@@ -4,26 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/babySky"
+    android:background="@color/White"
     tools:context=".name">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="-16dp">
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#004F91"
+            android:fontFamily="@font/goyang"
+            android:text="Enter your name"
+            android:textAlignment="center"
+            android:textColor="#FAB200"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+
+
+<!--        <Space-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="21dp" />-->
 
         <EditText
             android:id="@+id/name_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#FAB200"
             android:ems="10"
+            android:fontFamily="@font/goyang"
+            android:hint="Name"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:maxLength="15"
+            android:textSize="24sp" />
+
+<!--        <Space-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="19dp" />-->
 
         <Button
             android:id="@+id/name_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#FAB200"
+            android:fontFamily="@font/goyang"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:text="Create"
+            android:textAlignment="center"
+            android:textColor="#004F91"
+            android:textSize="36sp"
+            android:textStyle="bold" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -40,9 +40,11 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
+            android:backgroundTint="#004F91"
             android:elevation="4dp"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="#FAB200">
 
 
             <TextView
@@ -53,6 +55,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/goyang"
                 android:text="recorDiary"
+                android:textColor="#FAB200"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -75,7 +78,7 @@
                 <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
                     android:id="@+id/swipe2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="449dp">
 
 
                     <ViewFlipper
@@ -85,7 +88,7 @@
 
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:background="@color/White"
                             android:orientation="vertical">
 
@@ -98,13 +101,16 @@
                                 android:id="@+id/ScheduleTextView"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="@font/goyang"
                                 android:text="일정" />
 
                             <EditText
                                 android:id="@+id/editTextTextPersonName"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:backgroundTint="#FAB200"
                                 android:ems="10"
+                                android:fontFamily="@font/goyang"
                                 android:hint="Schedule"
                                 android:imeOptions="actionDone"
                                 android:inputType="textPersonName"
@@ -114,7 +120,10 @@
                                 android:id="@+id/save_button"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="저장" />
+                                android:backgroundTint="#FAB200"
+                                android:fontFamily="@font/goyang"
+                                android:text="save"
+                                android:textColor="#004F91" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                         <androidx.recyclerview.widget.RecyclerView
@@ -143,11 +152,14 @@
 
                     <Button
                         android:id="@+id/showDiary"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="112dp"
+                        android:layout_height="61dp"
                         android:layout_weight="5"
+                        android:backgroundTint="#FAB200"
+                        android:fontFamily="@font/goyang"
                         android:onClick="shownext"
-                        android:text="일기장"
+                        android:text="Diary"
+                        android:textColor="#004F91"
                         android:visibility="visible" />
 
                     <Button
@@ -155,17 +167,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="5"
+                        android:backgroundTint="#FAB200"
+                        android:fontFamily="@font/goyang"
                         android:onClick="showprevious"
-                        android:text="일정"
+                        android:text="Schedule"
+                        android:textColor="#004F91"
                         android:visibility="gone" />
 
                 </FrameLayout>
 
                 <ImageButton
                     android:id="@+id/make_new_diary_btn"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="top"
                     android:layout_margin="10dp"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="2"

@@ -51,6 +51,25 @@
                 </FrameLayout>
 
                 <LinearLayout
+                    android:id="@+id/emotionLayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:weightSum="10">
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/goyang"
+                        android:text="𝅘𝅥"
+                        android:textColor="@color/two_gray"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -74,31 +93,12 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="9"
                         android:background="?attr/editTextBackground"
-                        android:backgroundTint="@color/Navy"
+                        android:backgroundTint="#FAB200"
                         android:fontFamily="@font/goyang"
                         android:text="Title"
                         android:textColor="@color/four_gray"
                         android:textSize="30sp"
                         android:textStyle="bold" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/emotionLayer"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:orientation="horizontal"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:weightSum="10">
-                    <TextView
-                        android:id="@+id/textView15"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/goyang"
-                        android:text="☆"
-                        android:textColor="@color/babyPink"
-                        android:textSize="30sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -122,9 +122,10 @@
                     <TextView
                         android:id="@+id/Read_date"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="80dp"
                         android:layout_weight="9"
                         android:background="?attr/editTextBackground"
+                        android:backgroundTint="#FAB200"
                         android:fontFamily="@font/goyang"
                         android:text="Date"
                         android:textColor="@color/four_gray"
@@ -158,10 +159,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:fontFamily="@font/goyang"
                         android:layout_weight="9"
-                        android:autoLink="all"
-                        android:background="@color/White"
+                        android:background="?attr/editTextBackground"
+                        android:backgroundTint="#FAB200"
+                        android:fontFamily="@font/goyang"
                         android:shadowColor="@android:color/transparent"
                         android:text="Diary"
                         android:textColor="@color/Black"
@@ -183,8 +184,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/goyang"
-                        android:text="☆"
-                        android:textColor="@color/babyPink"
+                        android:text="𝄞"
+                        android:textColor="@color/two_gray"
                         android:textSize="30sp" />
 
                     <TextView
@@ -206,14 +207,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:text="시작" />
+                        android:backgroundTint="#FAB200"
+                        android:fontFamily="@font/goyang"
+                        android:text="시작"
+                        android:textColor="#004F91" />
 
                     <Button
                         android:id="@+id/stop"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:text="중지" />
+                        android:backgroundTint="#FAB200"
+                        android:fontFamily="@font/goyang"
+                        android:text="중지"
+                        android:textColor="#004F91" />
 
                 </LinearLayout>
 

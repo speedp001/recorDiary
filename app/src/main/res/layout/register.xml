@@ -23,10 +23,11 @@
             android:layout_height="0dp"
             android:layout_marginBottom="30dp"
             android:layout_weight="1"
+            android:background="#004F91"
             android:fontFamily="@font/goyang"
             android:gravity="center"
-            android:text="회원가입"
-            android:textColor="@color/Navy"
+            android:text="Register"
+            android:textColor="#FAB200"
             android:textSize="36sp"
             android:textStyle="bold" />
 
@@ -62,7 +63,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_weight="6"
                     android:background="?attr/editTextBackground"
-                    android:backgroundTint="@color/black"
+                    android:backgroundTint="#FAB200"
                     android:ems="7"
                     android:fontFamily="sans-serif-light"
                     android:hint="E-mail (ID)"
@@ -95,7 +96,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_weight="6"
                     android:background="?attr/editTextBackground"
-                    android:backgroundTint="@color/black"
+                    android:backgroundTint="#FAB200"
                     android:ems="7"
                     android:stateListAnimator="@null"
                     android:fontFamily="sans-serif-light"
@@ -129,7 +130,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_weight="6"
                     android:background="?attr/editTextBackground"
-                    android:backgroundTint="@color/black"
+                    android:backgroundTint="#FAB200"
                     android:ems="7"
                     android:fontFamily="sans-serif-light"
                     android:hint="Verify Password"
@@ -141,6 +142,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
+                android:background="#FAB200"
                 android:weightSum="0">
 
                 <Button
@@ -149,10 +151,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    android:background="#FAB200"
                     android:fontFamily="@font/goyang"
-                    android:text="회원등록"
+                    android:text="Sign up"
                     android:textAlignment="center"
-                    android:textColor="@color/two_gray"
+                    android:textColor="#004F91"
                     android:textSize="30sp"
                     android:textStyle="bold"
                     tools:layout_editor_absoluteY="265dp" />

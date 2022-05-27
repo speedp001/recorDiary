@@ -53,7 +53,7 @@
             android:adjustViewBounds="true"
             android:background="#00ffffff"
             android:scaleType="centerInside"
-            app:srcCompat="@drawable/plus2" />
+            app:srcCompat="@drawable/plus3" />
     </LinearLayout>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout

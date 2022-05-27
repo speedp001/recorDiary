@@ -87,7 +87,6 @@ public class Main_Screen extends AppCompatActivity {
         data_list = new ArrayList<>();
         recyclerView = findViewById(R.id.recyclerView);
         emptyView=findViewById( R.id.empty_text );
-        notemptyView=findViewById( R.id.not_empty_image );
         get_DB();
         Log.d("key", groupkey);
 
@@ -172,17 +171,6 @@ public class Main_Screen extends AppCompatActivity {
         recyclerAdapter = new RecyclerAdapter(data_list,this, cur_Group, key);
         recyclerView.setAdapter(recyclerAdapter);
 
-
-        if (recyclerAdapter.getItemCount() == 0) {
-
-            emptyView.setVisibility(View.VISIBLE);
-            notemptyView.setVisibility( View.GONE );
-        }
-        else {
-            Random random = new Random(  );
-            emptyView.setVisibility(View.GONE);
-            notemptyView.setVisibility( View.VISIBLE );
-        }
         recyclerAdapter.notifyDataSetChanged();
     }
 

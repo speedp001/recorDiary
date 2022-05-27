@@ -235,7 +235,7 @@ public class Make_diary_Activity extends AppCompatActivity {
                     finish();
 
                 } else if (id == R.id.action_settings3) {
-                    Toast.makeText( context, "Create by 지우 현민", Toast.LENGTH_SHORT ).show();
+                    Toast.makeText( context, "Create by SH YH SY YG", Toast.LENGTH_SHORT ).show();
 
                 }
 
