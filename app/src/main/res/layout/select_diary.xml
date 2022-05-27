@@ -41,8 +41,8 @@
 
                     <ImageView
                         android:id="@+id/Read_image"
-                        android:layout_width="match_parent"
-                        android:layout_height="300dp"
+                        android:layout_width="350dp"
+                        android:layout_height="290dp"
                         android:layout_centerHorizontal="true"
                         android:layout_margin="10dp"
                         android:scaleType="centerCrop"
@@ -64,8 +64,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/goyang"
-                        android:text="☆"
-                        android:textColor="@color/babyPink"
+                        android:text="𝅘𝅥𝅮"
+                        android:textColor="@color/two_gray"
                         android:textSize="30sp" />
 
                     <TextView
@@ -74,7 +74,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="9"
                         android:background="?attr/editTextBackground"
-                        android:backgroundTint="@color/babyPink"
+                        android:backgroundTint="@color/Navy"
                         android:fontFamily="@font/goyang"
                         android:text="Title"
                         android:textColor="@color/four_gray"
@@ -96,8 +96,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/goyang"
-                        android:text="☆"
-                        android:textColor="@color/babyPink"
+                        android:text="𝅘𝅥𝅯"
+                        android:textColor="@color/two_gray"
                         android:textSize="30sp" />
 
                     <TextView
@@ -109,7 +109,7 @@
                         android:fontFamily="@font/goyang"
                         android:text="Date"
                         android:textColor="@color/four_gray"
-                        android:textSize="24sp"
+                        android:textSize="30sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -129,8 +129,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/goyang"
-                        android:text="☆"
-                        android:textColor="@color/babyPink"
+                        android:text="𝅘𝅥𝅰"
+                        android:textColor="@color/two_gray"
                         android:textSize="30sp" />
 
                     <TextView
@@ -139,14 +139,13 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
+                        android:fontFamily="@font/goyang"
                         android:layout_weight="9"
                         android:autoLink="all"
                         android:background="@color/White"
-                        android:fontFamily="@font/goyang"
-                        android:scrollbarStyle="insideInset"
                         android:shadowColor="@android:color/transparent"
                         android:text="Diary"
-                        android:textColor="@color/four_gray"
+                        android:textColor="@color/Black"
                         android:textSize="30sp" />
                 </LinearLayout>
 

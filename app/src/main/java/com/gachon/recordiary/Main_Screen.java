@@ -62,7 +62,6 @@ public class Main_Screen extends AppCompatActivity {
     RecyclerView recyclerView;
     ImageView emptyView;
     ImageView notemptyView;
-    int[] image = { R.drawable.phrase2,R.drawable.phrase3, R.drawable.phrase4, R.drawable.phrase5,R.drawable.phrase6, R.drawable.phrase7, R.drawable.phrase8, R.drawable.phrase9,R.drawable.phrase10, R.drawable.phrase11, R.drawable.phrase12, R.drawable.phrase13,R.drawable.phrase14, R.drawable.phrase15, R.drawable.phrase16, R.drawable.phrase17,R.drawable.phrase18};
 
     CalendarView calendarView;
     Button button;
@@ -92,56 +91,6 @@ public class Main_Screen extends AppCompatActivity {
         get_DB();
         Log.d("key", groupkey);
 
-        calendarView=findViewById(R.id.calendarView);
-        button=findViewById(R.id.save_button);
-        textView=findViewById(R.id.ScheduleTextView);
-        editText=findViewById(R.id.editTextTextPersonName);
-        final String[] date = new String[1];
-
-        //show schedule
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            @Override
-            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                date[0] = String.format("%d%d%d",year,month+1,dayOfMonth);
-                String schedule_path = "Schedule/" + cur_User + "/" + date[0] + "/";
-
-                databaseReference = firebaseDatabase.getReference(schedule_path);
-                databaseReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String schedule = dataSnapshot.getValue(String.class);
-                        if (schedule != null)
-                        {
-                            textView.setText(String.format("%d/%d/%d\n",year,month+1, dayOfMonth) + schedule);
-                        }
-                        else
-                        {
-                            textView.setText(String.format("%d/%d/%d\n일정없음",year,month+1, dayOfMonth));
-                        }
-
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-                        //Log.e("MainActivity", String.valueOf(databaseError.toException())); // 에러문 출력
-                        textView.setText(String.format("%d/%d/%d",year,month+1, dayOfMonth));
-                    }
-                });
-            }
-        });
-
-        button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                String edit_schedule = String.valueOf(editText.getText());
-                Intent intent = new Intent(Main_Screen.this, DB.class);
-                intent.putExtra("CODE", Write_Schedule_CODE);
-                intent.putExtra("keyUserID", cur_User);
-                intent.putExtra("keySchedule", edit_schedule);
-                intent.putExtra("keyDate", date[0]);
-                startActivity(intent);
-            }
-        });
 
         //Write Diary
         ImageButton addbtn = findViewById(R.id.Diary_add);
@@ -231,8 +180,6 @@ public class Main_Screen extends AppCompatActivity {
         }
         else {
             Random random = new Random(  );
-            int num = random.nextInt(image.length);
-            notemptyView.setImageResource( image[num] );
             emptyView.setVisibility(View.GONE);
             notemptyView.setVisibility( View.VISIBLE );
         }
@@ -397,7 +344,4 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemViewHolde
 
 
 }
-
-
-
 

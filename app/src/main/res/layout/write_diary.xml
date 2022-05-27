@@ -58,7 +58,7 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
-
+        //sttResult"
         <EditText
             android:id="@+id/Diary_input"
             android:layout_width="match_parent"
@@ -75,6 +75,15 @@
             android:textStyle="normal" />
 
 
+        <ImageButton
+            android:id="@+id/recordBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="record"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/start_record" />
+
         <Button
             android:id="@+id/Diary_upload"
             android:layout_width="match_parent"
@@ -86,22 +95,16 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/recordTextView"
+        //sttStart
+
+        <LinearLayout
+            android:id="@+id/calenderLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="음성 녹음 시작"
-            android:textSize="22sp" />
+            android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/recordBtn"
-            android:layout_width="111dp"
-            android:layout_height="48dp"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            android:text="음성인식 시작"
-            app:srcCompat="@drawable/start_record" />
+
+        </LinearLayout>
     </LinearLayout>
 
 

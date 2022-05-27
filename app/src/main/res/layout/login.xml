@@ -1,149 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/White">
+    android:background="@color/White"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="356dp"
+        android:background="@color/White"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="411dp"
+            android:layout_height="295dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/intro_login" />
+    </FrameLayout>
+
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:weightSum="3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0">
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
 
-        <FrameLayout
+        <EditText
+            android:id="@+id/id_text"
+            style="@style/Widget.AppCompat.EditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:background="@color/Gray"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp">
+            android:background="?attr/editTextBackground"
+            android:ems="15"
+            android:fontFamily="sans-serif-light"
+            android:hint="E-mail (ID)"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/two_gray"
+            android:textColorHint="@color/two_gray"
+            android:textColorLink="@color/black"
+            android:textCursorDrawable="@color/black"
+            android:textSize="24sp"
+            tools:layout_marginBottom="5dp" />
 
-            <ImageView
-                android:id="@+id/imageView12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/intro_login" />
-        </FrameLayout>
-
-        <LinearLayout
+        <EditText
+            android:id="@+id/password_text"
+            style="@android:style/Widget.EditText"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:background="?attr/editTextBackground"
+            android:ems="15"
+            android:fontFamily="sans-serif-light"
+            android:freezesText="false"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/two_gray"
+            android:textColorHighlight="@color/babyPink"
+            android:textColorHint="@color/two_gray"
+            android:textColorLink="@color/babyPink"
+            android:textCursorDrawable="@color/babyPurple"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="109dp"
+            android:layout_weight="1"
             android:background="@color/White"
-            android:gravity="start"
-            android:orientation="horizontal"
-            android:weightSum="10">
+            android:fontFamily="@font/goyang"
+            android:onClick="Login_Btn_Click"
+            android:text="Login"
+            android:textAlignment="center"
+            android:textColor="@color/two_gray"
+            android:textSize="40sp"
+            android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingStart="15dp"
-                android:paddingEnd="15dp">
+        <Button
+            android:id="@+id/register_start_btn"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:background="@color/White"
+            android:fontFamily="@font/goyang"
+            android:paddingLeft="10dp"
+            android:stateListAnimator="@null"
+            android:text="회원가입"
+            android:textAlignment="center"
+            android:textColor="@color/Navy"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/id_text"
-                    style="@style/Widget.AppCompat.EditText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="?attr/editTextBackground"
-                    android:backgroundTint="@color/babySky"
-                    android:ems="10"
-                    android:fontFamily="sans-serif-light"
-                    android:hint="ID"
-                    android:inputType="textEmailAddress"
-                    android:textColor="@color/two_gray"
-                    android:textColorHighlight="@color/babyPink"
-                    android:textColorHint="@color/two_gray"
-                    android:textColorLink="@color/babyPink"
-                    android:textCursorDrawable="@color/babyPurple"
-                    android:textSize="24sp"
-                    tools:layout_marginBottom="5dp" />
-
-                <EditText
-                    android:id="@+id/password_text"
-                    style="@android:style/Widget.EditText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="?attr/editTextBackground"
-                    android:backgroundTint="@color/babySky"
-                    android:ems="10"
-                    android:fontFamily="sans-serif-light"
-                    android:freezesText="false"
-                    android:hint="Password"
-                    android:inputType="textPassword"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="@color/two_gray"
-                    android:textColorHighlight="@color/babyPink"
-                    android:textColorHint="@color/two_gray"
-                    android:textColorLink="@color/babyPink"
-                    android:textCursorDrawable="@color/babyPurple"
-                    android:textSize="24sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/register_start_btn"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/White"
-                        android:fontFamily="@font/goyang"
-                        android:paddingLeft="10dp"
-                        android:stateListAnimator="@null"
-                        android:text="☆ 회원가입"
-                        android:textAlignment="viewStart"
-                        android:textColor="@color/babyPink"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="7"
-                android:orientation="vertical"
-                android:paddingRight="15dp"
-                android:weightSum="3">
-
-                <Button
-                    android:id="@+id/login_btn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#FFFFFF"
-                    android:fontFamily="@font/goyang"
-                    android:onClick="Login_Btn_Click"
-                    android:text="Login"
-                    android:textAlignment="center"
-                    android:textColor="@color/babyPurple"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-        </LinearLayout>
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

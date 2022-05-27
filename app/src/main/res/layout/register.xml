@@ -26,7 +26,7 @@
             android:fontFamily="@font/goyang"
             android:gravity="center"
             android:text="회원가입"
-            android:textColor="@color/babyPurple"
+            android:textColor="@color/Navy"
             android:textSize="36sp"
             android:textStyle="bold" />
 
@@ -50,7 +50,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/goyang"
                     android:gravity="center"
-                    android:text="☆"
+                    android:text="𝅘𝅥𝅮"
                     android:textSize="36sp"
                     android:textStyle="bold" />
 
@@ -62,12 +62,12 @@
                     android:layout_marginBottom="10dp"
                     android:layout_weight="6"
                     android:background="?attr/editTextBackground"
-                    android:backgroundTint="@color/babyPink"
+                    android:backgroundTint="@color/black"
                     android:ems="7"
-                    android:fontFamily="@font/goyang"
+                    android:fontFamily="sans-serif-light"
                     android:hint="E-mail (ID)"
                     android:inputType="textEmailAddress"
-                    android:textSize="30sp" />
+                    android:textSize="27sp" />
             </TableRow>
 
             <TableRow
@@ -83,7 +83,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/goyang"
                     android:gravity="center"
-                    android:text="☆"
+                    android:text="𝅘𝅥𝅯"
                     android:textSize="36sp"
                     android:textStyle="normal|bold" />
 
@@ -95,13 +95,13 @@
                     android:layout_marginBottom="10dp"
                     android:layout_weight="6"
                     android:background="?attr/editTextBackground"
-                    android:backgroundTint="@color/babyPink"
+                    android:backgroundTint="@color/black"
                     android:ems="7"
                     android:stateListAnimator="@null"
-                    android:fontFamily="@font/goyang"
+                    android:fontFamily="sans-serif-light"
                     android:hint="Password (least 6 digits)"
                     android:inputType="textPersonName"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
             </TableRow>
 
             <TableRow
@@ -117,7 +117,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/goyang"
                     android:gravity="center|top"
-                    android:text="☆"
+                    android:text="𝅘𝅥𝅰"
                     android:textSize="36sp"
                     android:textStyle="bold" />
 
@@ -129,17 +129,17 @@
                     android:layout_marginBottom="10dp"
                     android:layout_weight="6"
                     android:background="?attr/editTextBackground"
-                    android:backgroundTint="@color/babyPink"
+                    android:backgroundTint="@color/black"
                     android:ems="7"
-                    android:fontFamily="@font/goyang"
+                    android:fontFamily="sans-serif-light"
                     android:hint="Verify Password"
                     android:inputType="textPersonName"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:weightSum="0">
 
@@ -149,11 +149,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:background="#FFFFFF"
                     android:fontFamily="@font/goyang"
-                    android:text="Register"
+                    android:text="회원등록"
                     android:textAlignment="center"
-                    android:textColor="@color/crop__button_text"
+                    android:textColor="@color/two_gray"
                     android:textSize="30sp"
                     android:textStyle="bold"
                     tools:layout_editor_absoluteY="265dp" />

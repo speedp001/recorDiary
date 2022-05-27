@@ -34,14 +34,13 @@
                 android:background="@drawable/diarygradient"
                 android:fontFamily="@font/goyang"
                 android:maxLength="15"
-                android:paddingLeft="30dp"
+                android:paddingLeft="0dp"
                 android:paddingTop="70dp"
                 android:paddingRight="55dp"
                 android:paddingBottom="20dp"
-                android:text="안녕"
+                android:text="New diary"
                 android:textAlignment="center"
-                android:textSize="36sp"
-                android:textStyle="italic" />
+                android:textSize="36sp" />
         </LinearLayout>
     </FrameLayout>
 

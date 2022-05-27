@@ -1,5 +1,7 @@
 package com.gachon.recordiary;
 
+import static com.gachon.recordiary.DB.Write_Schedule_CODE;
+
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -16,11 +18,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -39,6 +43,11 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -61,6 +70,16 @@ public class Make_diary_Activity extends AppCompatActivity {
 
     String UID;
 
+    public Button showDiary;
+    public Button showSchedule;
+    private ViewFlipper vf;
+    public CalendarView calendarView;
+    public TextView textView;
+    public EditText editText;
+
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance("https://recordiary-bb8f1-default-rtdb.asia-southeast1.firebasedatabase.app/");
+    DatabaseReference databaseReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
@@ -68,6 +87,11 @@ public class Make_diary_Activity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
+
+        showSchedule = findViewById(R.id.showSchedule);
+        showDiary = findViewById(R.id.showDiary);
+        vf = findViewById(R.id.vf);
+
 
         //Get Nickname
         if (TextUtils.isEmpty( firebaseUser.getDisplayName() )) {
@@ -231,7 +255,76 @@ public class Make_diary_Activity extends AppCompatActivity {
                 swipeRefreshLayout.setRefreshing(false);
             }
         });
+
+        calendarView=findViewById(R.id.calendarView);
+        button=findViewById(R.id.save_button);
+        textView=findViewById(R.id.ScheduleTextView);
+        editText=findViewById(R.id.editTextTextPersonName);
+        final String[] date = new String[1];
+
+        //show schedule
+        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+                date[0] = String.format("%d%d%d",year,month+1,dayOfMonth);
+                String schedule_path = "Schedule/" + firebaseUser.getDisplayName() + "/" + date[0] + "/";
+
+                databaseReference = firebaseDatabase.getReference(schedule_path);
+                databaseReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        String schedule = dataSnapshot.getValue(String.class);
+                        if (schedule != null)
+                        {
+                            textView.setText(String.format("%d/%d/%d\n",year,month+1, dayOfMonth) + schedule);
+                        }
+                        else
+                        {
+                            textView.setText(String.format("%d/%d/%d\n일정없음",year,month+1, dayOfMonth));
+                        }
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        //Log.e("MainActivity", String.valueOf(databaseError.toException())); // 에러문 출력
+                        textView.setText(String.format("%d/%d/%d",year,month+1, dayOfMonth));
+                    }
+                });
+            }
+        });
+
+        button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                String edit_schedule = String.valueOf(editText.getText());
+                if (date[0] == null)
+                {
+                    toast("날짜를 선택해 주세요");
+                }
+                if (edit_schedule.equals(""))
+                {
+                    toast("일정을 입력해 주세요");
+                }
+                else {
+                    Intent intent = new Intent(Make_diary_Activity.this, DB.class);
+                    intent.putExtra("CODE", Write_Schedule_CODE);
+                    intent.putExtra("keyUserID", firebaseUser.getDisplayName());
+                    intent.putExtra("keySchedule", edit_schedule);
+                    intent.putExtra("keyDate", date[0]);
+                    editText.setText("");
+                    startActivity(intent);
+                }
+            }
+        });
     }
+
+
+    public void toast(String text){
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+    }
+
+
 
 
     public void getGrouplist(String UID) {
@@ -297,6 +390,8 @@ public class Make_diary_Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         }) ;
+
+
 
     }
 
@@ -410,5 +505,25 @@ public class Make_diary_Activity extends AppCompatActivity {
             }
         }
 
+    }
+
+    public void shownext(View view)
+    {
+        showDiary = findViewById(R.id.showDiary);
+        showSchedule = findViewById(R.id.showSchedule);
+        vf = findViewById(R.id.vf);
+        toast("버튼 눌렸음");
+        showDiary.setVisibility(View.GONE);
+        showSchedule.setVisibility(View.VISIBLE);
+        vf.showNext();
+        toast("Diary");
+    }
+
+    public void showprevious(View view)
+    {
+        showSchedule.setVisibility(View.GONE);
+        showDiary.setVisibility(View.VISIBLE);
+        vf.showPrevious();
+        toast("Schedule");
     }
 }

@@ -38,6 +38,7 @@ public class Write_Diary extends AppCompatActivity {
     TextView recordTextView;
     ImageButton recordBtn;
     EditText Diarytext;
+
     final int PERMISSION = 1;
     boolean recording = false;  //녹음중인지 여부
 
@@ -69,6 +70,7 @@ public class Write_Diary extends AppCompatActivity {
         intentRecord=new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intentRecord.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE,getPackageName());
         intentRecord.putExtra(RecognizerIntent.EXTRA_LANGUAGE,"ko-KR");
+
         recordBtn.setOnClickListener(v ->{
             mRecognizer=SpeechRecognizer.createSpeechRecognizer(this);
             mRecognizer.setRecognitionListener(listener);
@@ -130,10 +132,9 @@ public class Write_Diary extends AppCompatActivity {
         });
     }
 
-    private RecognitionListener listener = new RecognitionListener() {
+     RecognitionListener listener = new RecognitionListener() {
         @Override
         public void onReadyForSpeech(Bundle params) {
-            Toast.makeText(getApplicationContext(),"음성인식을 시작합니다.",Toast.LENGTH_SHORT).show();
         }
 
         @Override
@@ -199,7 +200,7 @@ public class Write_Diary extends AppCompatActivity {
             String originText = Diarytext.getText().toString();  //기존 text
 
             // 이후 for문으로 textView에 setText로 음성인식된 결과를 수정해줍니다.
-            //인식 결과
+            // 인식 결과
             String newText="";
             for(int i = 0; i < matches.size() ; i++){
                 newText += matches.get(i);
@@ -270,7 +271,6 @@ public class Write_Diary extends AppCompatActivity {
         private void handle_crop ( int Code, Intent result){
             if (Code == RESULT_OK) {
                 imageView.setImageURI(Crop.getOutput(result));
-
 
             } else if (Code == RESULT_ERROR) {
                 Toast.makeText(this, Crop.getError(result).getMessage(), Toast.LENGTH_SHORT).show();
