@@ -91,7 +91,7 @@
             android:fontFamily="@font/goyang"
             android:paddingLeft="10dp"
             android:stateListAnimator="@null"
-            android:text="회원가입"
+            android:text="SING UP"
             android:textAlignment="center"
             android:textColor="@color/Navy"
             android:textSize="20sp"

@@ -185,7 +185,7 @@ public class Make_diary_Activity extends AppCompatActivity {
 
         getGrouplist( UID );
 
-        ImageButton diary_add_btn = findViewById( R.id.make_new_diary_btn );
+        Button diary_add_btn = findViewById( R.id.make_new_diary_btn );
         diary_add_btn.setOnClickListener( new Button.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent( Make_diary_Activity.this, make_new_diary.class );

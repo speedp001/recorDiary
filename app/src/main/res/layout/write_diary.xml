@@ -50,7 +50,7 @@
             android:backgroundTint="#FAB200"
             android:fontFamily="@font/goyang"
             android:gravity="top"
-            android:hint="☆Title"
+            android:hint="Title"
             android:inputType="textPersonName"
             android:maxLength="12"
             android:singleLine="true"
@@ -176,10 +176,10 @@
             android:id="@+id/Diary_upload"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/transparent"
+            android:backgroundTint="#FAB200"
             android:fontFamily="@font/goyang"
             android:text="SAVE"
-            android:textColor="@color/two_gray"
+            android:textColor="#004F91"
             android:textSize="30sp"
             android:textStyle="bold" />
 

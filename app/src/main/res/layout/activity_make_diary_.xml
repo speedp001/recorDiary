@@ -71,14 +71,14 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="30dp"
-                android:layout_weight="8">
+                android:layout_height="206dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="6">
 
                 <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
                     android:id="@+id/swipe2"
                     android:layout_width="match_parent"
-                    android:layout_height="449dp">
+                    android:layout_height="match_parent">
 
 
                     <ViewFlipper
@@ -88,7 +88,7 @@
 
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="507dp"
                             android:background="@color/White"
                             android:orientation="vertical">
 
@@ -102,7 +102,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/goyang"
-                                android:text="일정" />
+                                android:text="일정"
+                                android:textSize="20sp" />
 
                             <EditText
                                 android:id="@+id/editTextTextPersonName"
@@ -114,6 +115,7 @@
                                 android:hint="Schedule"
                                 android:imeOptions="actionDone"
                                 android:inputType="textPersonName"
+                                android:textSize="20sp"
                                 android:visibility="visible" />
 
                             <Button
@@ -123,7 +125,9 @@
                                 android:backgroundTint="#FAB200"
                                 android:fontFamily="@font/goyang"
                                 android:text="save"
-                                android:textColor="#004F91" />
+                                android:textColor="#004F91"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                         <androidx.recyclerview.widget.RecyclerView
@@ -140,54 +144,63 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2"
+                android:layout_weight="4"
                 android:background="@color/White"
                 android:orientation="horizontal"
-                android:weightSum="7">
+                android:weightSum="3">
 
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="5">
+                    android:layout_weight="2"
+                    >
 
                     <Button
                         android:id="@+id/showDiary"
-                        android:layout_width="112dp"
-                        android:layout_height="61dp"
+                        android:layout_width="205dp"
+                        android:layout_height="111dp"
+                        android:layout_gravity="center"
                         android:layout_weight="5"
                         android:backgroundTint="#FAB200"
                         android:fontFamily="@font/goyang"
                         android:onClick="shownext"
                         android:text="Diary"
                         android:textColor="#004F91"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
                         android:visibility="visible" />
 
                     <Button
                         android:id="@+id/showSchedule"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="205dp"
+                        android:layout_height="111dp"
+                        android:layout_gravity="center"
                         android:layout_weight="5"
                         android:backgroundTint="#FAB200"
                         android:fontFamily="@font/goyang"
                         android:onClick="showprevious"
                         android:text="Schedule"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
                         android:textColor="#004F91"
                         android:visibility="gone" />
 
                 </FrameLayout>
 
-                <ImageButton
+                <Button
                     android:id="@+id/make_new_diary_btn"
-                    android:layout_width="50dp"
-                    android:layout_height="46dp"
-                    android:layout_gravity="top"
-                    android:layout_margin="10dp"
-                    android:layout_marginBottom="20dp"
-                    android:layout_weight="2"
+                    android:layout_width="106dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    android:background="#00ffffff"
+                    android:backgroundTint="#FAB200"
+                    android:fontFamily="@font/goyang"
                     android:scaleType="centerInside"
-                    app:srcCompat="@drawable/plus2" />
+                    android:text="make diary"
+                    android:textColor="#004F91"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
         </LinearLayout>
