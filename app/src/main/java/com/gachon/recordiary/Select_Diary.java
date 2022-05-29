@@ -145,13 +145,13 @@ public class Select_Diary extends AppCompatActivity {
                 }
                 if(music.equals("soso")) {
                     // MediaPlayer 객체 할당
-                    mediaPlayer = MediaPlayer.create(Select_Diary.this, R.raw.soso);
+                    mediaPlayer = MediaPlayer.create(Select_Diary.this, R.raw.bad);
                     mediaPlayer.start();
                     mediaPlayer.setLooping(true);
                 }
                 if(music.equals("bad")) {
                     // MediaPlayer 객체 할당
-                    mediaPlayer = MediaPlayer.create(Select_Diary.this, R.raw.bad);
+                    mediaPlayer = MediaPlayer.create(Select_Diary.this, R.raw.soso);
                     mediaPlayer.start();
                     mediaPlayer.setLooping(true);
                 }

@@ -91,7 +91,7 @@
             android:fontFamily="@font/goyang"
             android:paddingLeft="10dp"
             android:stateListAnimator="@null"
-            android:text="SING UP"
+            android:text="SIGN UP"
             android:textAlignment="center"
             android:textColor="@color/Navy"
             android:textSize="20sp"

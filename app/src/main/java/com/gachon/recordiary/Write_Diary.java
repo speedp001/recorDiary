@@ -97,7 +97,6 @@ public class Write_Diary extends AppCompatActivity {
             }
         });
 
-
         final Intent intent = new Intent(Write_Diary.this, DB.class); // sub(DB)로 넘기기
 
         UploadBtn.setOnClickListener(new View.OnClickListener() {
@@ -135,7 +134,6 @@ public class Write_Diary extends AppCompatActivity {
                     intent.putExtra("keyDiary", Diary);
                     intent.putExtra("keyPath", String.valueOf(filePath));
                     intent.putExtra("emotion", emotion); //추가
-
 
                     startActivity(intent);
                     finish();
@@ -336,7 +334,6 @@ public class Write_Diary extends AppCompatActivity {
         }
     }
 
-
     @Override
         protected void onActivityResult ( int requestCode, int resultCode, Intent data){
             super.onActivityResult(requestCode, resultCode, data);
@@ -349,8 +346,6 @@ public class Write_Diary extends AppCompatActivity {
             } else if (requestCode == Crop.REQUEST_CROP) {
                 handle_crop(resultCode, data);
             }
-
-
         }
 
         private void handle_crop ( int Code, Intent result){
@@ -359,9 +354,7 @@ public class Write_Diary extends AppCompatActivity {
 
             } else if (Code == RESULT_ERROR) {
                 Toast.makeText(this, Crop.getError(result).getMessage(), Toast.LENGTH_SHORT).show();
-
             }
         }
-
 }
 
