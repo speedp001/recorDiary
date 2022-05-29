@@ -41,6 +41,7 @@ public class DB extends AppCompatActivity {
     public static final int delete_DIARY_CODE = 6;
     public static final int delete_GROUP_CODE = 7;
     public static final int Write_Schedule_CODE = 8;
+    public static final int Delete_Schedule_CODE = 9;
 
     public static final int Return_OK = 100;
     public static final int Return_fail = 200;
@@ -102,17 +103,6 @@ public class DB extends AppCompatActivity {
                 databaseReference = firebaseDatabase.getReference(DBPath);
                 databaseReference.push().setValue(tmp_datalist);
                 uploadFile(cur_groupname, Date, Title);
-                finish();
-                break;
-
-            case Write_Schedule_CODE:
-                String UserID = get_intent.getExtras().getString("keyUserID");
-                String schedule_text = get_intent.getExtras().getString("keySchedule");
-                Date = get_intent.getExtras().getString("keyDate");
-                DBPath = "Schedule/" + UserID + "/" + Date;
-
-                databaseReference = firebaseDatabase.getReference(DBPath);
-                databaseReference.setValue(schedule_text);
                 finish();
                 break;
 
@@ -263,6 +253,27 @@ public class DB extends AppCompatActivity {
                 String groupkey = get_intent.getExtras().getString("key");
 
                 DBPath = "User/" + curUID + "/Group/" + groupkey + "/";
+
+                databaseReference = firebaseDatabase.getReference(DBPath);
+                databaseReference.removeValue();
+                finish();
+                break;
+
+            case Write_Schedule_CODE:
+                String UserID = get_intent.getExtras().getString("keyUserID");
+                String schedule_text = get_intent.getExtras().getString("keySchedule");
+                Date = get_intent.getExtras().getString("keyDate");
+                DBPath = "Schedule/" + UserID + "/" + Date;
+
+                databaseReference = firebaseDatabase.getReference(DBPath);
+                databaseReference.setValue(schedule_text);
+                finish();
+                break;
+
+            case Delete_Schedule_CODE:
+                UserID = get_intent.getExtras().getString("keyUserID");
+                Date = get_intent.getExtras().getString("keyDate");
+                DBPath = "Schedule/" + UserID + "/" + Date;
 
                 databaseReference = firebaseDatabase.getReference(DBPath);
                 databaseReference.removeValue();

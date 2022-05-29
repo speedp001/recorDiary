@@ -1,5 +1,6 @@
 package com.gachon.recordiary;
 
+import static com.gachon.recordiary.DB.Delete_Schedule_CODE;
 import static com.gachon.recordiary.DB.Write_Schedule_CODE;
 
 import android.content.ClipData;
@@ -64,6 +65,9 @@ public class Make_diary_Activity extends AppCompatActivity {
     private FirebaseUser firebaseUser;
 
     Button button;
+    Button save_button;
+    Button modi_button;
+    Button del_button;
 
     private DrawerLayout mDrawerLayout;
     private Context context = this;
@@ -257,7 +261,9 @@ public class Make_diary_Activity extends AppCompatActivity {
         });
 
         calendarView=findViewById(R.id.calendarView);
-        button=findViewById(R.id.save_button);
+        save_button=findViewById(R.id.save_button);
+        modi_button=findViewById(R.id.modi_button);
+        del_button=findViewById(R.id.del_button);
         textView=findViewById(R.id.ScheduleTextView);
         editText=findViewById(R.id.editTextTextPersonName);
         final String[] date = new String[1];
@@ -276,10 +282,16 @@ public class Make_diary_Activity extends AppCompatActivity {
                         String schedule = dataSnapshot.getValue(String.class);
                         if (schedule != null)
                         {
+                            save_button.setVisibility(View.GONE);
+                            modi_button.setVisibility(View.VISIBLE);
+                            del_button.setVisibility(View.VISIBLE);
                             textView.setText(String.format("%d/%d/%d\n",year,month+1, dayOfMonth) + schedule);
                         }
                         else
                         {
+                            save_button.setVisibility(View.VISIBLE);
+                            modi_button.setVisibility(View.GONE);
+                            del_button.setVisibility(View.GONE);
                             textView.setText(String.format("%d/%d/%d\n일정없음",year,month+1, dayOfMonth));
                         }
 
@@ -294,7 +306,7 @@ public class Make_diary_Activity extends AppCompatActivity {
             }
         });
 
-        button.setOnClickListener(new View.OnClickListener(){
+        save_button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 String edit_schedule = String.valueOf(editText.getText());
@@ -315,6 +327,54 @@ public class Make_diary_Activity extends AppCompatActivity {
                     editText.setText("");
                     startActivity(intent);
                 }
+            }
+        });
+
+        modi_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String edit_schedule = String.valueOf(editText.getText());
+                if (edit_schedule.equals(""))
+                {
+                    toast("일정을 입력해 주세요");
+                }
+                else {
+                    Intent intent = new Intent(Make_diary_Activity.this, DB.class);
+                    intent.putExtra("CODE", Write_Schedule_CODE);
+                    intent.putExtra("keyUserID", firebaseUser.getDisplayName());
+                    intent.putExtra("keySchedule", edit_schedule);
+                    intent.putExtra("keyDate", date[0]);
+                    editText.setText("");
+                    startActivity(intent);
+                }
+            }
+        });
+        del_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder myAlertBuilder = new AlertDialog.Builder(Make_diary_Activity.this);
+
+                myAlertBuilder.setTitle("DELETE");
+                myAlertBuilder.setMessage("일정을 삭제 하시겠습니까?");
+
+                myAlertBuilder.setPositiveButton("삭제",new DialogInterface.OnClickListener(){
+                    public void onClick(DialogInterface dialog,int which){
+                        Toast.makeText(getApplicationContext(),"삭제되었습니다", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(Make_diary_Activity.this, DB.class);
+                        intent.putExtra("CODE", Delete_Schedule_CODE);
+                        intent.putExtra("keyUserID", firebaseUser.getDisplayName());
+                        intent.putExtra("keyDate", date[0]);
+                        editText.setText("");
+                        startActivity(intent);
+                    }
+                });
+                myAlertBuilder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getApplicationContext(),"삭제하지 않았습니다", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                myAlertBuilder.show();
             }
         });
     }
