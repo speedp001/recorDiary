@@ -572,7 +572,6 @@ public class Make_diary_Activity extends AppCompatActivity {
         showDiary = findViewById(R.id.showDiary);
         showSchedule = findViewById(R.id.showSchedule);
         vf = findViewById(R.id.vf);
-        toast("버튼 눌렸음");
         showDiary.setVisibility(View.GONE);
         showSchedule.setVisibility(View.VISIBLE);
         vf.showNext();

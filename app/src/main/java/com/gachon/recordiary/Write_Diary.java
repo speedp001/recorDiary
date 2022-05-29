@@ -140,9 +140,10 @@ public class Write_Diary extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }
-                if(checkBox_G.isChecked()) {
+                else if(checkBox_G.isChecked()) {
                     // good db에 전송
                     emotion = "good";
+                    Toast.makeText(getApplicationContext(), "good", Toast.LENGTH_SHORT).show();
                     intent.putExtra("CODE", REQUESTCODE);
                     intent.putExtra("keyGroup", curGroup);
                     intent.putExtra("keyUser", curUser);
@@ -156,9 +157,10 @@ public class Write_Diary extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }
-                if(checkBox_S.isChecked()) {
+                else if(checkBox_S.isChecked()) {
                     // soso db에 전송
                     emotion = "soso";
+                    Toast.makeText(getApplicationContext(), "soso", Toast.LENGTH_SHORT).show();
                     intent.putExtra("CODE", REQUESTCODE);
                     intent.putExtra("keyGroup", curGroup);
                     intent.putExtra("keyUser", curUser);
@@ -172,9 +174,10 @@ public class Write_Diary extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }
-                if(checkBox_B.isChecked()) {
+                else if(checkBox_B.isChecked()) {
                     // bad db에 전송
                     emotion = "bad";
+                    Toast.makeText(getApplicationContext(), "bad", Toast.LENGTH_SHORT).show();
                     intent.putExtra("CODE", REQUESTCODE);
                     intent.putExtra("keyGroup", curGroup);
                     intent.putExtra("keyUser", curUser);
@@ -194,8 +197,7 @@ public class Write_Diary extends AppCompatActivity {
                     return;
                 }
 
-                startActivity(intent);
-                finish();
+
 
                 switch (view.getId()) {
                     //녹음 버튼
