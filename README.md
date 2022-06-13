@@ -1,5 +1,5 @@
 # RecorDiary
-> ##RecorDiary = Record + Diary
+> **RecorDiary = Record + Diary**
 
 *1. Motivation
 >If we write a diary using a phone, we will use keypad. But this keypad has some problems. 
