@@ -6,6 +6,7 @@
 >
 >The problem is that the thumb is mainly used, so it is slow and there are many typos. So we use Google STT API.
 
+---
 2. Key Features
 - Speech recognition
 >Voice recognition text storage function
@@ -16,13 +17,14 @@
 - Share diary with designated Friends
 >You can shared diary with designated people.
 
+---
 3. How to use
 1) Make a id and Password
 2) Set Nickname
 3) Add Main Diary
 4) Write diary
 
-
+---
 4. Member Role
 
 - 이연희
@@ -31,21 +33,21 @@
 > Music Algorithm
 > 
 > Structure Design
----
+
 - 김승호
 > Manage API
 > 
 > Sign up service
 > 
 > Design GUI
----
+
 - 이상윤
 > Manage API
 > 
 > Design GUI
 > 
 > Structure Design
----
+
 - 김용겸
 > Share Function
 > 
