@@ -34,10 +34,14 @@
 1) Make a id and Password
 > Users register information in firebase.
 2) Set Nickname
+> Users get unique nickname that using for share diary.
+3) Add Schedule in Schedule Calender
+> Edit and write the schedule for each day in form of a calender
+4) Add Main Diary
 >
-3) Add Main Diary
+5) Add Main Diary
 >
-4) Write diary
+6) Write diary
 
 
 ## 5. Member Role
