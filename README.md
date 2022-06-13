@@ -27,7 +27,11 @@
 4. Member Role
 
 - 이연희
-|:Manage Server:|:Music Algorithm:|:Structure Design:|
+>Manage Server
+>
+>Music Algorithm
+>
+>Structure Design
 
 - 김승호
 > Manage API
