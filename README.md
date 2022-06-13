@@ -27,7 +27,9 @@
 
 - 이연희
 > Manage Server
+> 
 > Music Algorithm
+> 
 > Structure Design
 ---
 - 김승호
