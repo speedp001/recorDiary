@@ -16,3 +16,28 @@ Share diary with designated Friends
 
 3. How to use
 1) Make a id and Password
+2) Set Nickname
+3) Add Main Diary
+
+If you want share the diary should put friend’s code
+User’s code can copy on the menu
+
+4) Write diary
+
+4. Member Role
+이연희
+- Manage Server
+- Music Algorithm
+- Structure Design
+김승호
+- Manage API
+- Sign up service
+- Design GUI
+이상윤
+- Manage API
+- Design GUI
+- Structure Design
+김용겸
+- Share Function
+- Manage Firebase
+- Calendar View
