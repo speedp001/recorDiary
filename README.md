@@ -38,11 +38,11 @@
 3) Add Schedule in Schedule Calender
 > Edit and write the schedule for each day in form of a calender
 4) Add Main Diary
->
-5) Add Main Diary
->
-6) Write diary
-
+> A place to create a diary that can share with your friends
+5) Write Daily Dairy
+> Voice recognition and add mood emotion with BGM, image input are possible on this page.
+6) Share Dairy
+> Make Diary to share with designated people
 
 ## 5. Member Role
 
