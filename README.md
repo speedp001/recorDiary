@@ -3,16 +3,19 @@
 >
 ---
 ## 1. Motivation
+
 >If we write a diary using a phone, we will use keypad. But this keypad has some problems. 
 >
 >The problem is that the thumb is mainly used, so it is slow and there are many typos. So we use Google STT API.
 
-2. Development Environment 
+## 2. Development Environment 
+
 > Android Studio
 > 
 > Firebase Database
 
-3. Key Features
+## 3. Key Features
+
 - Speech recognition
 >Voice recognition text storage function
 - Schedule manage with Calendar
@@ -22,14 +25,15 @@
 - Share diary with designated Friends
 >You can shared diary with designated people.
 
-4. How to use
+## 4. How to use
+
 1) Make a id and Password
 2) Set Nickname
 3) Add Main Diary
 4) Write diary
 
 
-5. Member Role
+## 5. Member Role
 
 - 이연희
 >Manage Server
