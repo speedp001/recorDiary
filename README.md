@@ -32,8 +32,11 @@
 ## 4. How to use
 
 1) Make a id and Password
+> Users register information in firebase.
 2) Set Nickname
+>
 3) Add Main Diary
+>
 4) Write diary
 
 
