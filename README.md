@@ -12,7 +12,9 @@
 
 ## 2. Motivation
 
->In particular, there are only couple diaries or applications that expose content to others in the current market. Even if you set your account private, it will eventually be open to friends who are following you. Various functions that can be shared in groups with a large number of friends have been developed such as a group diary, that is, a recorder diary.
+>In particular, there are only couple diaries or applications that expose content to others in the current market. 
+>Even if you set your account private, it will eventually be open to friends who are following you. 
+>Various functions that can be shared in groups with a large number of friends have been developed such as a group diary, that is, a recorder diary.
 
 ## 3. Key Features
 
