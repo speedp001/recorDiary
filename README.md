@@ -32,21 +32,21 @@
 > Music Algorithm
 > 
 > Structure Design
----
+
 - 김승호
 > Manage API
 > 
 > Sign up service
 > 
 > Design GUI
----
+
 - 이상윤
 > Manage API
 > 
 > Design GUI
 > 
 > Structure Design
----
+
 - 김용겸
 > Share Function
 > 
