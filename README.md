@@ -2,7 +2,7 @@
 
 ![Logo](https://user-images.githubusercontent.com/44600564/173354358-bdf5147e-bda5-44fa-8e8f-0ce136cd4147.png)
 > ### **RecorDiary = Record + Diary**
-
+>For those who want to write a diary but spend too much time, or who have a hard time keeping a diary, a diary that can be easily managed using various functions.
 ---
 ## 1. Development Environment 
 
