@@ -9,6 +9,8 @@
 > Android Studio
 > 
 > Firebase Database
+>
+> Google STT API
 
 ## 2. Motivation
 
