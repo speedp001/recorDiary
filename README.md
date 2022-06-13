@@ -15,7 +15,7 @@
 - Share diary with designated Friends
 >You can shared diary with designated people.
 
-> 3. How to use
+3. How to use
 1) Make a id and Password
 2) Set Nickname
 3) Add Main Diary
