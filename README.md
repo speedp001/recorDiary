@@ -2,7 +2,8 @@
 > RecorDiary = Record + Diary
 
 > 1. Motivation
-* If we write a diary using a phone, we will use keypad. But this keypad has some problems. The problem is that the thumb is mainly used, so it is slow and there are many typos. So we use Google STT API.
+* If we write a diary using a phone, we will use keypad. But this keypad has some problems. 
+* The problem is that the thumb is mainly used, so it is slow and there are many typos. So we use Google STT API.
 
 > 2. Key Features
 * Speech recognition
