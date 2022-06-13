@@ -25,23 +25,22 @@
 
 4. Member Role
 
-*이연희
-- Manage Server
-- Music Algorithm
-- Structure Design
+- 이연희
+> Manage Server
+> Music Algorithm
+> Structure Design
 ---
-*김승호
-- Manage API
-- Sign up service
-- Design GUI
+- 김승호
+> Manage API
+> Sign up service
+> Design GUI
 ---
-*이상윤
-- Manage API
-- Design GUI
-- Structure Design
+- 이상윤
+> Manage API
+> Design GUI
+> Structure Design
 ---
-*김용겸
-- Share Function
-- Manage Firebase
-- Calendar View
----
+- 김용겸
+> Share Function
+> Manage Firebase
+> Calendar View
