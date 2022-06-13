@@ -1,6 +1,6 @@
 # RecorDiary
 > **RecorDiary = Record + Diary**
-
+>
 1. Motivation
 >If we write a diary using a phone, we will use keypad. But this keypad has some problems. 
 >The problem is that the thumb is mainly used, so it is slow and there are many typos. So we use Google STT API.
@@ -15,13 +15,13 @@
 - Share diary with designated Friends
 >You can shared diary with designated people.
 
-3. How to use
+> 3. How to use
 1) Make a id and Password
 2) Set Nickname
 3) Add Main Diary
 
->If you want share the diary should put friend’s code
->User’s code can copy on the menu
+If you want share the diary should put friend’s code
+User’s code can copy on the menu
 
 4) Write diary
 
