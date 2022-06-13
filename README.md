@@ -36,15 +36,15 @@
 1) Make a id and Password
 > Users register information in firebase.
 2) Set Nickname
-> Users get unique nickname that using for share diary.
+> Users set unique nickname that using for share diary
 3) Add Schedule in Schedule Calender
 > Edit and write the schedule for each day in form of a calender
 4) Add Main Diary
 > A place to create a diary that can share with your friends
 5) Write Daily Dairy
-> Voice recognition and add mood emotion with BGM, image input are possible on this page.
+> Voice recognition and add mood emotion with BGM, image input are possible on this page
 6) Share Dairy
-> Make Diary to share with designated people
+> Make Diary to share with designated people by private code
 
 ## 5. Member Role
 
