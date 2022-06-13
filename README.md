@@ -15,15 +15,15 @@
 - Share diary with designated Friends
 >You can shared diary with designated people.
 
-> 3. How to use
-1) Make a id and Password
-2) Set Nickname
-3) Add Main Diary
+3. How to use
+>1) Make a id and Password
+>2) Set Nickname
+>3) Add Main Diary
 
-If you want share the diary should put friend’s code
-User’s code can copy on the menu
+>If you want share the diary should put friend’s code
+>User’s code can copy on the menu
 
-4) Write diary
+>4) Write diary
 
 > 4. Member Role
 
