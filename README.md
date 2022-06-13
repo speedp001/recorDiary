@@ -1,10 +1,10 @@
 # RecorDiary
 > RecorDiary = Record + Diary
 
-1. Motivation
+> 1. Motivation
 If we write a diary using a phone, we will use keypad. But this keypad has some problems. The problem is that the thumb is mainly used, so it is slow and there are many typos. So we use Google STT API.
 
-2. Key Features
+> 2. Key Features
 Speech recognition
 - Voice recognition text storage function
 Schedule manage with Calendar
@@ -14,7 +14,7 @@ Music tag and mood expression
 Share diary with designated Friends
 - You can shared diary with designated people.
 
-3. How to use
+> 3. How to use
 1) Make a id and Password
 2) Set Nickname
 3) Add Main Diary
@@ -24,7 +24,8 @@ User’s code can copy on the menu
 
 4) Write diary
 
-4. Member Role
+> 4. Member Role
+
 이연희
 - Manage Server
 - Music Algorithm
