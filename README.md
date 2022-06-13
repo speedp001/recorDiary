@@ -1,2 +1,2 @@
 # RecorDiary
->sdasdg
+> RecorDiary = Record + diary
