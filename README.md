@@ -1,4 +1,4 @@
-# ecorDiary (Moblie Programming)
+# RecorDiary (Moblie Programming)
 
 ![Logo](https://user-images.githubusercontent.com/44600564/173354358-bdf5147e-bda5-44fa-8e8f-0ce136cd4147.png)
 > ### **RecorDiary = Record + Diary**
@@ -47,6 +47,12 @@
 > Make Diary to share with designated people by private code
 
 ## 5. Member Role
+- 이상윤
+> Manage API
+> 
+> Design GUI
+> 
+> Structure Design
 
 - 이연희
 >Manage Server
@@ -61,13 +67,6 @@
 > Sign up service
 > 
 > Design GUI
-
-- 이상윤
-> Manage API
-> 
-> Design GUI
-> 
-> Structure Design
 
 - 김용겸
 > Share Function
