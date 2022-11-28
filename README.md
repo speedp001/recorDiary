@@ -1,4 +1,4 @@
-# recorDiary (Moblie Programming)
+# ecorDiary (Moblie Programming)
 
 ![Logo](https://user-images.githubusercontent.com/44600564/173354358-bdf5147e-bda5-44fa-8e8f-0ce136cd4147.png)
 > ### **RecorDiary = Record + Diary**
